@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 
 function Cuisine() {
@@ -22,16 +22,17 @@ function Cuisine() {
 
   return (
     <Grid>
-      {cuisine.map((item) => {
-        return (
-          <Card key={item.id}>
-            <Link to={"/recipe/" + item.id}>
-              <img src={item.image} alt={item.title} />
-              <h4>{item.title}</h4>
-            </Link>
-          </Card>
-        );
-      })}
+      {cuisine &&
+        cuisine.map((item) => {
+          return (
+            <Card key={item.id}>
+              <Link to={"/recipe/" + item.id}>
+                <img src={item.image} alt={item.title} />
+                <h4>{item.title}</h4>
+              </Link>
+            </Card>
+          );
+        })}
     </Grid>
   );
 }
