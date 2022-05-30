@@ -18,10 +18,10 @@ function Category() {
         <GiNoodles />
         <h4>Thai</h4>
       </SLink>
-      <SLink to={"/cuisine/Japanese"}>
+      {/* <SLink to={"/cuisine/Japanese"}>
         <GiChopsticks />
         <h4>Japanese</h4>
-      </SLink>
+      </SLink> */}
     </List>
   );
 }
